@@ -1,0 +1,31 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class CodingStyle : MonoBehaviour
+{
+    //? Constants: Uppercase SNAKE_CASE
+    public const float CONSTANT_FIELD = 3.1416f;
+
+    //? Propierties: PascalCase
+    public static CodingStyle Instance { get; private set; }
+
+    //? Events: PascalCase
+    public event EventHandler OnSomethingHappened;
+
+    //?Fields: camelCase
+    private float memberVariable;
+
+    //? Function names: PascalCase
+    private void Awake() {
+        Instance = this;
+
+        DoSomething(10f);
+    }
+
+    //? Function Params: _camelCase
+    private void DoSomething(float _time) {
+
+    }
+}
